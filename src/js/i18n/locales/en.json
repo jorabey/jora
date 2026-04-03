@@ -1,0 +1,15 @@
+{
+  "logo":"JORA NET",
+  "navbar.home": "Home",
+  "navbar.messages": "Messages",
+  "navbar.profile":"Profile",
+   "navbar.ai":"AI",
+  "navbar.apps":"Apps",
+  "post_add":"Post Add",
+  "profile.settings":"Settings",
+  "settings.themes":"Themes",
+  "settings.language":"Languages",
+  "settings.devices":"Devices",
+  "settings.info":"Info",
+  "settings.storage":"Storage"
+}

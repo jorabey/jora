@@ -1,0 +1,70 @@
+/* --- UI Elementlarini Tozalash (Reset) --- */
+
+/* 1. Tugmalarni tozalash */
+button {
+  appearance: none;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; /* Mobil bosish effektini o'chirish */
+}
+
+/* 2. Input va Textarealarni tozalash */
+input,
+textarea {
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+}
+
+/* 3. Ro'yxatlarni tozalash */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* 4. Linklarni tozalash */
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 5. Scrollbar xatti-harakati */
+html {
+  -webkit-text-size-adjust: 100%; /* iOS da matn o'lchami o'zgarib ketmasligi uchun */
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+/* 6. Rasmlar va Media */
+img,
+svg,
+video,
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 7. Fokus holatidagi ko'rinish (Accessibility uchun) */
+:focus-visible {
+  outline: 2px solid var(--blue-600);
+  outline-offset: 2px;
+}

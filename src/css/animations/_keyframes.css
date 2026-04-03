@@ -1,0 +1,97 @@
+/* ============== Fade In ========= */
+@keyframes fadeIn {
+  from {
+    opacity: var(--opacity-0);
+    transform: translateY(var(--space-2)) translateX(-50%);
+  }
+  to {
+    opacity: var(--opacity-100);
+    transform: translateY(var(--space-0)) translateX(-50%);
+  }
+}
+
+@keyframes fadeIn2 {
+  from {
+    opacity: var(--opacity-0);
+    transform: translateY(var(--space-2));
+  }
+  to {
+    opacity: var(--opacity-100);
+    transform: translateY(var(--space-0));
+  }
+}
+
+/* ============== Fade Out ========= */
+@keyframes fadeOut {
+  from {
+    opacity: var(--opacity-100);
+    transform: translateX(var(--space-0));
+  }
+  to {
+    opacity: var(--opacity-0);
+    transform: translateX(var(--space-10));
+    height: 0;
+    margin: var(--space-0);
+    padding: var(--space-0);
+  }
+}
+
+/* ============== Drop Notif ========= */
+@keyframes dropNotif {
+  0% {
+    transform: translateY(-100%) translateX(-50%) scale(var(--scale-50));
+    opacity: var(--opacity-0);
+  }
+  60% {
+    transform: translateY(var(--space-3)) translateX(-50%) scale(var(--scale-105));
+    opacity: var(--opacity-100);
+  }
+  100% {
+    transform: translateY(0) translateX(-50%) scale(var(--scale-100));
+    opacity: var(--opacity-100);
+  }
+}
+
+/* ============== Loading ========= */
+@keyframes spin {
+  from {
+    transform: rotate(var(--rotate-0));
+  }
+  to {
+    transform: rotate(var(--rotate-360));
+  }
+}
+
+/* ============== Glass Shimmer ========= */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes liftNotif {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%) scale(0.5);
+  }
+}
+
+
+
+    @keyframes ripple-animation {
+      from {
+        transform: scale(0);
+        opacity: 0.5;
+      }
+      to {
+        transform: scale(2.5);
+        opacity: 0;
+      }
+    }

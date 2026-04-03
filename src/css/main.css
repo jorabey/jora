@@ -1,0 +1,256 @@
+/* 1. BASE */
+@import "./base/base.css";
+
+/* 2. ANIMATIONS */
+@import "./animations/animations.css";
+
+/* 3. GLOBAL  */
+@import "./global/global.css";
+
+/* 4. UTILS - Yordamchilar */
+
+/*
+body {
+ background-image: url("https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?crop=entropy&cs=srgb&fm=jpg&ixid=M3wzMjM4NDZ8MHwxfHJhbmRvbXx8fHx8fHx8fDE3NDk1MzU4MDV8&ixlib=rb-4.1.0&q=85");
+ background-color: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.05)
+  );
+  background-color: antiquewhite;
+  background-size: cover;
+  background-attachment: fixed;
+  touch-action: pan-x pan-y;
+  overscroll-behavior: contain;
+  min-height: 100vh;
+}*/
+/*
+:root {
+  --border-radius: 2rem;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.6rem 2rem;
+  --search-padding: 0.6rem 1rem;
+  --card-padding: 1rem;
+  --color-white: hsl(252, 30%, 100%);
+  --color-gray: hsl(252, 15%, 65%);
+  --color-light: hsl(252, 30%, 90%);
+  --color-dark: hsl(252, 30%, 17%);
+  --color-primary: hsl(22, 75%, 60%);
+  --color-success: hsl(120, 95%, 60%);
+  --color-danger: hsl(0, 95%, 65%);
+  --color-black: hsl(252, 30%, 10%);
+  --sticky-top-left: 5.4rem;
+  --sticky-top-right: -18rem;
+}
+*/
+.card {
+  touch-action: pan-x pan-y;
+  overflow: auto;
+  max-height: 100vh;
+  border-radius: 20px;
+  /*border: 1px solid rgba(255, 255, 255, 0.3);*/
+  /*padding: 20px;*/
+  transition: 0.3s ease;
+  /*box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);*/
+  animation: shimmer var(--duration-spin) forwards;
+ /* margin-top: 20px;*/
+  display: block;
+  position: fixed;
+  right: 100px;
+  width: 1000px;
+  /*top: 100px;*/
+}
+
+
+
+.profile-pic {
+  width: 2.7rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+.middle {
+  width: 100%;
+  height: max-content;
+
+  
+}
+
+
+.feeds{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+  padding-top: 70px;
+}
+
+
+
+
+
+.middle  .feed {
+  width: 100%;
+ /* background: var(--color-white);*/
+  border-radius: var(--card-border-radius);
+  padding: var(--card-padding);
+  max-width: 50%;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.middle .feed .head {
+  display: flex;
+  justify-content: space-between;
+}
+
+.middle .feed .user {
+  display: flex;
+  gap: 1rem;
+}
+
+.middle .feed .photo {
+  border-radius: var(--card-border-radius);
+  overflow: hidden;
+  margin: 0.7rem 0;
+}
+.middle .feed .action-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  margin: 0.6rem;
+}
+
+.middle .liked-by {
+  display: flex;
+}
+
+.middle .liked-by span {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: block;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+  margin-left: -0.6rem;
+}
+
+.middle .liked-by span:first-child {
+  margin: 0;
+}
+
+.middle .liked-by p {
+  margin-left: 0.5rem;
+}
+
+
+
+@media (max-width: 1280px) {
+  .card {
+    right: 300px;
+    width: 500px;
+  }
+}
+
+@media (max-width: 1233px) {
+  .card {
+    position: fixed;
+    right: 300px;
+    width: 500px;
+  }
+}
+
+@media (max-width: 1038px) {
+  .card {
+    right: 200px;
+  }
+}
+
+@media (max-width: 950px) {
+  .card {
+    right: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    position: static;
+    width: 100%;
+  }
+
+  .middle .feed{
+    max-width: 98%;
+  }
+
+  .feeds{
+    padding: 0;
+  }
+}
+/*
+@media (max-height: 730px) {
+  .card {
+    max-height: 450px;
+  }
+}
+
+@media (max-height: 676px) {
+  .card {
+    max-height: 400px;
+  }
+}
+
+@media (max-height: 630px) {
+  .card {
+    max-height: 350px;
+  }
+}
+
+@media (max-height: 573px) {
+  .card {
+    max-height: 300px;
+  }
+}
+
+@media (max-height: 530px) {
+  .card {
+    max-height: 250px;
+  }
+}
+
+@media (max-height: 475px) {
+  .card {
+    max-height: 200px;
+  }
+}
+
+@media (max-height: 423px) {
+  .card {
+    max-height: 150px;
+  }
+}
+
+@media (max-height: 373px) {
+  .card {
+    max-height: 100px;
+  }
+}
+
+@media (max-height: 330px) {
+  .card {
+    max-height: 50px;
+  }
+}
+*/

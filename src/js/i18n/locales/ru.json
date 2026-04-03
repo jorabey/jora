@@ -1,0 +1,15 @@
+{
+  "name":"JORA NET",
+  "navbar.home": "Главная",
+  "navbar.messages": "Сообщения",
+  "navbar.profile":"Профиль",
+  "navbar.ai":"ИИ",
+  "navbar.apps":"Приложения",
+  "post_add":"Добавить Post",
+  "profile.settings":"Настройки",
+  "settings.themes":"Темы",
+  "settings.language":"Язык",
+  "settings.devices":"Устройства",
+  "settings.info":"Информация",
+  "settings.storage":"Память"
+}

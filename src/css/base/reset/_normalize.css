@@ -1,0 +1,86 @@
+/**
+ * 1. Hamma brauzerlarda standart "line-height"ni o'rnatish.
+ * 2. iOS'da shrift o'lchamini avtomatik o'zgarishini oldini olish.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Body ichidagi standart marginlarni olib tashlash.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * 1. "main" elementini IE brauzerida to'g'ri ko'rsatish.
+ */
+main {
+  display: block;
+}
+
+/**
+ * 1. "h1" shrift o'lchamini va marginini standartlashtirish.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * 1. "hr" elementidagi "overflow"ni IE da to'g'irlash.
+ * 2. Firefox da balandlikni to'g'ri hisoblash.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+
+/**
+ * Preformat qilingan matnlarni hamma brauzerda bir xil ko'rsatish.
+ */
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/**
+ * 1. Linklardagi "transparent" orqa fonni IE 10 da to'g'irlash.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. "abbr" elementidagi pastki chiziqni to'g'irlash.
+ */
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted;
+}
+
+/**
+ * Shrift qalinligini Safari va Chrome'da to'g'ri ko'rsatish.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. "small" shrift o'lchamini standartlashtirish.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Rasmlardagi "border"ni IE 10 da olib tashlash.
+ */
+img {
+  border-style: none;
+}

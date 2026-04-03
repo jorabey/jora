@@ -1,0 +1,44 @@
+/* ================== GLOBAL BUTTON ======== */
+.btn {
+  position: fixed;
+  bottom: 120px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: var(--gl-button-border-radius);
+  border: var(--gl-button-border);
+  cursor: var(--cursor-pointer);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-50);
+  transition: var(--transition-all);
+  animation: var(--gl-button-animation);
+  color: var(--gl-button-text-color);
+  font-size: var(--gl-button-text-size);
+  font-weight: var(--gl-button-title-weight);
+  font-family: var(--gl-button-font-family);
+  box-shadow: var(--shadow-inner);
+}
+
+.btn:hover {
+  transform: translateY(calc(var(--space-1) * -1));
+  box-shadow:
+    0 10px 35px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
+
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.1),
+    inset 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn i {
+  color: var(--gl-button-icon-color);
+  
+  font-size: var(--gl-button-icon-size);
+}

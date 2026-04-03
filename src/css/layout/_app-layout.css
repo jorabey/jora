@@ -1,0 +1,45 @@
+/* --- Asosiy Ilova Skeleti (App Skeleton) --- */
+
+/* Butun sahifani qoplovchi wrapper */
+.app-wrapper {
+  display: flex;
+  flex-direction: column; /* Mobilda elementlar ustma-ust */
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: var(--nav-height-mobile); /* Mobilda navbar uchun joy */
+}
+
+/* Asosiy kontent maydoni */
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding-top: var(--space-5);
+  padding-bottom: var(--space-12); /* Navbar ustiga chiqib ketmasligi uchun */
+  z-index: var(--z-base);
+}
+
+/* --- Desktop Layout (769px dan yuqori) --- */
+@media (min-width: 769px) {
+  .app-wrapper {
+    flex-direction: row; /* Desktopda Navbar va Kontent yonma-yon */
+    padding-bottom: 0;
+    padding-left: var(--nav-width-desktop); /* Sidebar kengligi uchun masofa */
+  }
+
+  .main-content {
+    padding: var(--space-8);
+    max-width: 1000px; /* Desktopda kengroq bo'lishi mumkin */
+    margin: 0 auto;
+  }
+}
+
+/* --- Qatlamlar bo'yicha tartiblash (Layout Overlay) --- */
+.overlay-layer {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-modal-bg);
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(4px);
+  display: none; /* JS orqali ko'rsatiladi */
+  place-items: center;
+}

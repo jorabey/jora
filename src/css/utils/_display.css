@@ -1,0 +1,59 @@
+/* --- Display & Visibility Helpers --- */
+
+/* 1. Elementni butunlay yashirish */
+.hidden {
+  display: none !important;
+}
+
+/* 2. Elementni ko'rsatish (Block darajasida) */
+.block {
+  display: block !important;
+}
+
+/* 3. Inline-block (Elementlar yonma-yon, lekin o'lchamga ega) */
+.inline-block {
+  display: inline-block !important;
+}
+
+/* 4. Flexbox yordamchilari (Tezkor markazlashtirish) */
+.flex {
+  display: flex !important;
+}
+
+.flex-center {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* 5. Shaffoflik (Opacity) orqali yashirish/ko'rsatish 
+   (Animatsiyalar bilan ishlaganda foydali) 
+*/
+.opacity-0 {
+  opacity: 0 !important;
+  pointer-events: none; /* Bosishni taqiqlash */
+}
+
+.opacity-100 {
+  opacity: 1 !important;
+  pointer-events: auto;
+}
+
+/* 6. Z-index helpers */
+.z-top {
+  z-index: var(--z-notification) !important;
+}
+.z-modal {
+  z-index: var(--z-modal) !important;
+}
+.z-base {
+  z-index: var(--z-base) !important;
+}
+
+/* 7. Overflow boshqaruvi */
+.overflow-hidden {
+  overflow: hidden !important;
+}
+.overflow-auto {
+  overflow: auto !important;
+}

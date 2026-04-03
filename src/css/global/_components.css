@@ -1,0 +1,125 @@
+/* Error Component */
+.error_container {
+  display: flex;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.error_div {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  border-width: 1px;
+  border-color: #fef2f2;
+  max-width: 28rem;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.error_icon {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 9999px;
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  color: #ef4444;
+  background-color: #fef2f2;
+}
+
+.error_name {
+  color:#000000;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+}
+
+.error_messages {
+  color:#000000;
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1.625;
+}
+
+.error_button {
+  cursor: pointer;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  margin-top: 2rem;
+  border-radius: 0.75rem;
+  width: 100%;
+  font-weight: 600;
+  color: #151414;
+  transition-property:
+    color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  border: 1px solid #151414;
+}
+
+.error_button:hover {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+/* Not Found Component */
+.not_found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #ffffff;
+}
+
+.not_found-div {
+  text-align: center;
+}
+
+.not_found-name {
+  font-size: 8rem;
+  line-height: 1;
+  font-weight: 900;
+}
+
+.not_found-text {
+  margin-top: 1rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 500;
+}
+
+.not_found-button {
+  display: inline-block;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #4f46e5;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.not_found-button:hover {
+  background-color: #4338ca;
+}

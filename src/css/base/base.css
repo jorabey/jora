@@ -1,0 +1,136 @@
+/*reset*/
+@import "./reset/_normalize.css";
+@import "./reset/_box-sizing.css";
+@import "./reset/_reset-ui.css";
+
+/*root*/
+@import "./root/_colors.css";
+@import "./root/_typography.css";
+@import "./root/_variables.css";
+
+:root {
+  /* ================= COLORS ================= */
+  --color-primary: #000;
+  --color-secondary: #2563eb;
+  --color-accent: #f43f5e;
+  --color-success: #16a34a;
+  --color-warning: #eab308;
+  --color-error: #dc2626;
+  --color-info: #0ea5e9;
+  --background-color-primary:linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.25),
+    rgba(255, 255, 255, 0.05)
+  );
+  --background-image-primary:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQju-59I7Zc1AOMahss5QlYuPNDwNQsynnI4A&s");
+
+  
+  /* ================= ANIMATION DURATION ========= */
+  --animation-speed-primary:var(--duration-md);
+  --animation-speed-notif:var(--duration-md);
+
+  /* ================= FONT FAMILY ================= */
+  --font-family-primary:var(--font-sans);
+
+  /* ================= FONT SIZE =================== */
+  --font-size-primary:var(--text-base);
+  --font-size-secondary:var(--text-3xl);
+
+   /* ================= FONT WEIGHT ================= */
+  --font-weight-primary:var(--font-normal);
+  --font-weight-secondary:var(--font-bold);
+
+  /* ================= HEADER =========== */
+  --header-text-color:var(--color-primary);
+  --header-text-size:var(--font-size-primary);
+  --header-title-size:var(--font-size-secondary);
+  --header-text-weight:var(--font-weight-primary);
+  --header-title-weight:var(--font-weight-secondary);
+  --header-font-family:var(--font-family-primary);
+  --header-icon-color:var(--color-primary);
+  --header-icon-size:var(--font-size-primary);
+  --header-background-color:var(--background-color-primary);
+  --header-border-radius:var(--rounded-2xl);
+  --header-border:var(--border-xs) solid var(--gray-300);
+  --header-animation-speed:var(--animation-speed-primary);
+  --header-animation-name:fadeIn21;
+  --header-animation:var(--header-animation-name) var(--header-animation-speed) forwards;
+
+  /* ================= NAVBAR =========== */
+  --navbar-text-color:var(--color-primary);
+  --navbar-text-size:10px;
+  --navbar-text-weight:var(--font-weight-primary);
+  --navbar-title-weight:var(--font-weight-secondary);
+  --navbar-font-family:var(--font-family-primary);
+  --navbar-icon-color:var(--color-primary);
+  --navbar-active-icon-color:var(--color-secondary);
+  --navbar-icon-size:var(--font-size-secondary);
+  --navbar-background-color:var(--background-color-primary);
+  --navbar-border:var(--border-xs) solid var(--gray-300);
+  --navbar-border-radius:32px;
+  --navbar-animation-name:fadeIn1;
+  --navbar-animation-speed:var(--animation-speed-primary);
+  --navbar-animation:var(--navbar-animation-name) var(--navbar-animation-speed) forwards;
+
+  /* ================= GLOBAL BUTTON  =========== */
+  --gl-button-text-color:var(--color-primary);
+  --gl-button-text-size:var(--font-size-primary);
+  --gl-button-text-weight:var(--font-weight-primary);
+  --gl-button-title-weight:var(--font-weight-secondary);
+  --gl-button-font-family:var(--font-family-primary);
+  --gl-button-icon-color:var(--color-primary);
+  --gl-button-icon-size:var(--text-4xl);
+  --gl-button-background-color:var(--background-color-primary);
+  --gl-button-border-radius:var(--rounded-2xl);
+  --gl-button-border:var(--border-0);
+  --gl-button-animation-speed:var(--animation-speed-primary);
+  --gl-button-animation-name:dropNotif;
+  --gl-button-animation: var(--gl-button-animation-speed) forwards;
+
+
+  /* ================= POST ====================== */
+  --post-text-color:var(--color-primary);
+  --post-text-size:var(--font-size-primary);
+  --post-text-weight:var(--font-weight-primary);
+  --post-title-weight:var(--font-weight-secondary);
+  --post-font-family:var(--font-family-primary);
+  --post-icon-color:var(--color-primary);
+  --post-icon-size:var(--font-size-primary);
+  --post-background-color:var(--background-color-primary);
+  --post-border-radius:var(--rounded-2xl);
+  --post-animation-speed:var(--animation-speed-primary);
+  --post-animation-name:dropNotif;
+  --post-animation: var(--post-animation-speed) forwards;
+
+
+  /* ================= LINK ===================== */
+  --link-text-color:var(--color-primary);
+  --link-text-size:var(--font-size-primary);
+  --link-text-weight:var(--font-weight-primary);
+  --link-title-weight:var(--font-weight-secondary);
+  --link-font-family:var(--font-family-primary);
+  --link-icon-color:var(--color-primary);
+  --link-icon-size:var(--font-size-primary);
+  --link-background-color:var(--background-color-primary);
+  --link-border-radius:var(--rounded-2xl);
+  --link-animation-speed:var(--animation-speed-primary);
+  --link-animation-name:dropNotif;
+  --link-animation: var(--link-animation-speed) forwards;
+
+
+  /* ================= NOTIFICATION =============== */
+  --notif-text-color:var(--color-primary);
+  --notif-text-size:var(--font-size-primary);
+  --notif-text-weight:var(--font-weight-primary);
+  --notif-title-weight:var(--font-weight-secondary);
+  --notif-font-family:var(--font-family-primary);
+  --notif-icon-color:var(--color-primary);
+  --notif-icon-size:var(--font-size-primary);
+  --notif-background-color:var(--background-color-primary);
+  --notif-border-radius:var(--rounded-xl);
+  --notif-animation-name:dropNotif;
+  --notif-animation-speed:var(--animation-speed-primary);
+  --notif-animation:dropNotif var(--notif-animation-speed) forwards;
+
+
+}

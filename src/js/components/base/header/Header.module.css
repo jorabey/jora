@@ -1,0 +1,239 @@
+/* ====== HEADER START ===== */
+.header {
+  background: transparent;
+  backdrop-filter: blur(var(--blur-xl)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--blur-xl)) saturate(180%);
+  border-radius: var(--header-border-radius);
+  border: var(--header-border);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-md);
+  animation: var(--header-animation);
+  margin-top: var(--space-5);
+  display: block;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+
+ .header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: radial-gradient(ellipse 100% 80% at 50% -20%, rgba(255, 255, 255, 0.06), transparent 50%);
+      pointer-events: none;
+    }
+
+.header:active {
+  transform: translateY(var(--space-1));
+  box-shadow: var(--shadow-lg);
+}
+
+.header h2 {
+  margin-bottom: var(--space-4);
+  color: var(--header-text-color);
+  font-size: var(--text-xl);
+}
+
+
+/* ================ RESPONSIVE ========== */
+ /* CSS O'zgaruvchilar - Rasmingizdagi issiq ranglarga moslashtirilgan */
+        :root {
+            /* Rasmdagi fonga mos issiq sarg'ish/krem rang */
+            --bg-color: #fdf5ea; 
+            /* Header qutisi rangi (bir oz to'qroq krem) */
+            --header-surface: #f3e9d9;
+            /* Header ramkasi (juda mayin) */
+            --header-border: rgba(0, 0, 0, 0.06);
+            /* Matn ranglari */
+            --text-main: #1c1c1e;
+            --text-muted: #8e8e93;
+            /* Aktiv ranglar (Tugmalar uchun) */
+            --accent-color: #000000;
+            
+            /* Animatsiyalar (Apple Spring effekti) */
+            --spring: all 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+            --smooth: all 0.3s ease;
+        }
+        /* * =========================================
+         * FLOATING HEADER (Havoda suzib turuvchi quti)
+         * ========================================= */
+        .floating_header {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            max-width: 800px;
+            margin: 0 auto; 
+            height: 60px;
+            
+            /* Glassmorphism va silliq fon */
+             background: transparent;
+  backdrop-filter: blur(var(--blur-xl)) saturate(180%);
+  -webkit-backdrop-filter: blur(var(--blur-xl)) saturate(180%);
+            
+            border: 1.5px solid var(--header-border);
+            border-radius: 20px; /* Xuddi sizning rasmingizdagidek yumaloq burchaklar */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03); /* Mayin soya */
+            
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* Ichidagi elementlar toshib ketmasligi uchun */
+            transition: var(--spring);
+            z-index: 100;
+        }
+
+        /* ASOSIY KONTENT (Sarlavha va Lupa) */
+        .header_content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            transition: var(--spring);
+        }
+
+        /* Sahifa nomi */
+        .page_title {
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+            color: var(--text-main);
+        }
+
+        /* Lupa tugmasi */
+        .search_trigger {
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--smooth);
+            margin-right: -10px; /* O'ng burchakka yaqinlashtirish */
+        }
+
+        .search-trigger:active {
+            background: rgba(0, 0, 0, 0.05);
+            transform: scale(0.9);
+        }
+
+        /* * =========================================
+         * QIDIRUV FORMASI (Bosilganda chiqadigan qism)
+         * ========================================= */
+        .search_form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 12px;
+            
+            /* Boshlang'ich holati (Yashiringan) */
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(20px); /* O'ngdan kirib keladi */
+            transition: var(--spring);
+        }
+
+        /* Qidiruv Input qutisi */
+        .input_wrapper {
+            flex-grow: 1;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+        }
+
+        .input_icon {
+            color: var(--text-muted);
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .search_input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .search_input::placeholder {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Tozalash tugmasi (X) */
+        .clear_btn {
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            border: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0; /* Boshida ko'rinmaydi */
+            pointer-events: none;
+            transition: var(--smooth);
+        }
+
+        .clear_btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Bekor qilish tugmasi */
+        .cancel_btn {
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-color);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        /* * =========================================
+         * AKTIV HOLAT (Qidiruv ochiq bo'lganda)
+         * ========================================= */
+        .floating_header.search_active .header_content {
+            opacity: 0;
+            transform: scale(0.95); /* Matn orqaga uzoqlashib yo'qoladi */
+            pointer-events: none;
+        }
+
+        .floating_header.search_active .search_form {
+            opacity: 1;
+            transform: translateX(0); /* Joyiga keladi */
+            pointer-events: auto;
+        }
+
+        /* Qo'shimcha demo matnlar (Ixtiyoriy) */
+        .demo_content {
+            margin-top: 100px;
+            padding: 20px;
+            background: rgba(243, 233, 217, 0.5);
+            border-radius: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+/* ====== HEADER END ===== */

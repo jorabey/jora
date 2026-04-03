@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Media elementlari uchun qo'shimcha xavfsizlik:
+   Rasmlar va videolarda kutilmagan tashqi masofalar bo'lmasligi uchun.
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}

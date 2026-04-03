@@ -1,0 +1,631 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"bor",
+				"border\tproperty"
+			],
+			[
+				"tr",
+				"translateY()\ttransform"
+			],
+			[
+				"res",
+				"reset.css"
+			],
+			[
+				"di",
+				"display\tproperty"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"n",
+				"hidden\tvisibility"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"s",
+				"select\tTag"
+			],
+			[
+				"l",
+				"livereload_plugin\tCreate new LiveReload plugin"
+			],
+			[
+				"text-de",
+				"text-decoration-color\tproperty"
+			],
+			[
+				"color",
+				"text-decoration-color\tproperty"
+			],
+			[
+				"fon",
+				"font-family\tproperty"
+			],
+			[
+				"box",
+				"box-sizing\tproperty"
+			],
+			[
+				"marg",
+				"margin\tproperty"
+			],
+			[
+				"ras",
+				"rasm2.JPG"
+			],
+			[
+				"bu",
+				"bulb_pink.png\tw:128 h:128"
+			],
+			[
+				"bl",
+				"bulb.png\tw:128 h:128"
+			],
+			[
+				"bul",
+				"bulb_red.png\tw:128 h:128"
+			],
+			[
+				"curl_er",
+				"curl_error"
+			],
+			[
+				"curl_",
+				"curl_exec"
+			],
+			[
+				"print",
+				"print_r"
+			],
+			[
+				"err",
+				"error_reporting"
+			],
+			[
+				"ini",
+				"ini_set"
+			],
+			[
+				"ftp_",
+				"ftp_password"
+			],
+			[
+				"max",
+				"maxWidth\tnumber, string"
+			],
+			[
+				"au",
+				"autofocus\tAttr"
+			],
+			[
+				"mar",
+				"margin-top\tproperty"
+			],
+			[
+				"fle",
+				"flex-direction\tproperty"
+			],
+			[
+				"te",
+				"text-align\tproperty"
+			],
+			[
+				"u",
+				"url()\tcursor"
+			],
+			[
+				"r",
+				"redux-field-color\tredux-field-color"
+			],
+			[
+				"w",
+				"wait\tcursor"
+			],
+			[
+				"c",
+				"copy\tcursor"
+			],
+			[
+				"v",
+				"move\tcursor"
+			],
+			[
+				"o",
+				"progress\tcursor"
+			],
+			[
+				"t",
+				"pointer\tcursor"
+			],
+			[
+				"a",
+				"crosshair\tcursor"
+			],
+			[
+				"sp",
+				"space-between\tjustify-content"
+			],
+			[
+				"text-o",
+				"text-overflow\tproperty"
+			],
+			[
+				"no",
+				"nowrap\twhite-space"
+			],
+			[
+				"whi",
+				"white-space\tproperty"
+			],
+			[
+				"ov",
+				"overflow\tproperty"
+			],
+			[
+				"fl",
+				"flex-start\talign-items"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"h",
+				"html\thtml"
+			],
+			[
+				"ser",
+				"server.key"
+			],
+			[
+				"ba",
+				"backImg.jpg\tw:162 h:108"
+			],
+			[
+				"bacgr",
+				"background\tproperty"
+			],
+			[
+				"clo",
+				"color\tproperty"
+			],
+			[
+				"font",
+				"font-size\tproperty"
+			],
+			[
+				"bord",
+				"border-radius\tproperty"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"align",
+				"align-items\tproperty"
+			],
+			[
+				"al",
+				"alt\tAttr"
+			],
+			[
+				"fo",
+				"form\tTag"
+			],
+			[
+				"he",
+				"header\tTag"
+			],
+			[
+				"hr",
+				"header\tTag"
+			],
+			[
+				"childrens",
+				"childrensLength"
+			],
+			[
+				"cons",
+				"console\tconsole.log()"
+			],
+			[
+				"sc",
+				"script\tTag"
+			],
+			[
+				"console",
+				"console\tconsole.log()"
+			],
+			[
+				"reac",
+				"redux-field-image-select\tredux-field-image-select"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"About"
+			],
+			[
+				"prett",
+				"JsPrettier: Format Code"
+			],
+			[
+				"togg",
+				"View: Toggle Menu"
+			],
+			[
+				"Snippet: ",
+				"Snippet: Prototype"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"te",
+				"Terminal: Open in project folder"
+			],
+			[
+				"ter",
+				"Terminal: Open in project folder"
+			],
+			[
+				"Terminu",
+				"Preferences: Terminus Command Palette"
+			],
+			[
+				"Term",
+				"Terminal: Open in project folder"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"term",
+				"Preferences: Terminus View Settings"
+			],
+			[
+				"Terminus",
+				"Preferences: Terminus Settings"
+			],
+			[
+				"Enable/",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"package con",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"View Package File"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 128.0,
+		"history":
+		[
+			"clear",
+			"cls",
+			"terminus_open"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": true,
+		"show_open_files": true,
+		"show_tabs": true,
+		"side_bar_visible": false,
+		"status_bar_visible": true
+	},
+	"file_history":
+	[
+		"/var/www/html/test/src/js/components/base/header/Header.js",
+		"/var/www/html/test/src/js/components/base/navbar/Navbar.module.css",
+		"/var/www/html/test/src/css/animations/_keyframes.css",
+		"/var/www/html/test/src/css/global/global.css",
+		"/var/www/html/test/index.html",
+		"/var/www/html/test/src/js/components/base/navbar/Navbar.js",
+		"/var/www/html/test/t.html",
+		"/var/www/html/test/src/js/utils/dom.js",
+		"/var/www/html/test/src/js/components/base/header/Header.module.css",
+		"/var/www/html/test/src/js/components/base/global_button/GlobalButton.js",
+		"/home/jorabek/.config/sublime-text-3/Packages/User/react_component_creator.py",
+		"/var/www/html/test/node_modules/vite/dist/node/chunks/dep-3e87c7b2.js",
+		"/home/jorabek/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/jorabek/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/jorabek/.config/sublime-text-3/Packages/jora/main.py",
+		"/home/jorabek/.config/sublime-text-3/Packages/User/jora.sublime-snippet",
+		"/var/www/html/test/node_modules/rollup/dist/shared/rollup.js",
+		"/var/www/html/test/src/css/base/base.css",
+		"/var/www/html/test/src/css/main.css",
+		"/var/www/html/test/test.html",
+		"/var/www/html/test/src/js/components/base/layout/main_layout/MainLayout.css",
+		"/var/www/html/test/src/js/components/base/layout/main_layout/MainLayout.js",
+		"/var/www/html/test/package.json",
+		"/home/jorabek/Desktop/tizen/remote.js",
+		"/var/www/html/in/css/style.css",
+		"/var/www/html/in/index.html",
+		"/var/www/html/cmplap/css/base/global.css",
+		"/var/www/html/simple_app/test.html",
+		"/var/www/html/cmplap/css/base/reset.css",
+		"/var/www/html/cmplap/css/base/root.css",
+		"/var/www/html/simple_app/css/main.css",
+		"/var/www/html/simple_app/js/main.js",
+		"/var/www/html/cmplap/css/main.css",
+		"/var/www/html/cmplap/css/base/vairables.css",
+		"/home/jorabek/Downloads/RNDIS/rndis11.inf",
+		"/home/jorabek/Downloads/RNDIS/RNDIS.cat",
+		"/var/www/html/cmplap/js/components/Container.js",
+		"/var/www/html/cmplap/js/utils/test.js",
+		"/var/www/html/cmplap/js/components/ExtraButton.js",
+		"/var/www/html/cmplap/js/components/Navbar.js",
+		"/var/www/html/cmplap/js/state.js",
+		"/var/www/html/cmplap/js/components/Header.js",
+		"/var/www/html/cmplap/js/components/ContextMenu.js",
+		"/var/www/html/cmplap/js/components/SettingsList.js",
+		"/var/www/html/cmplap/index.html",
+		"/var/www/html/cmplap/css/components/ExtraButton.css",
+		"/var/www/html/cmplap/js/utils/showAlert.js",
+		"/var/www/html/cmplap/js/utils/getSection.js",
+		"/var/www/html/cmplap/js/utils/getData.js",
+		"/var/www/html/cmplap/js/components/TodoEditModal.js",
+		"/var/www/html/cmplap/js/components/NoteList.js",
+		"/var/www/html/cmplap/js/components/TodoList.js",
+		"/var/www/html/cmplap/js/main.js",
+		"/var/www/html/cmplap/js/components/TodoCreateModal.js",
+		"/var/www/html/cmplap/js/utils/GetData.js",
+		"/var/www/html/cmplap/js/utils/setDB.js",
+		"/var/www/html/cmplap/js/utils/ShowAlert.js",
+		"/var/www/html/cmplap/js/db/LocalStorage.js",
+		"/var/www/html/cmplap/css/animations/animations.css",
+		"/var/www/html/cmplap/css/components/List.css",
+		"/var/www/html/cmplap/js/components/List.js",
+		"/var/www/html/cmplap/css/components/Header.css",
+		"/var/www/html/cmplap/css/root.css",
+		"/var/www/html/cmplap/css/global.css",
+		"/var/www/html/cmplap/js/db/IndexDB.js",
+		"/var/www/html/cmplap/css/utils/glass.css",
+		"/var/www/html/cmplap/css/app.css",
+		"/var/www/html/cmplap/css/components/Container.css",
+		"/var/www/html/cmplap/css/components/Container.js",
+		"/var/www/html/cmplap/js/app.js",
+		"/var/www/html/simple_app/js/app.js",
+		"/var/www/html/simple_app/index.html",
+		"/var/www/html/simple_app/js/utils/getElements.js",
+		"/var/www/html/simple_app/db/db.js",
+		"/var/www/html/api/client/arx.txt",
+		"/home/jorabek/Desktop/New Empty File",
+		"/home/jorabek/Desktop/myos/arx.txt",
+		"/var/www/html/simple_app/render/render.js",
+		"/var/www/html/simple_app/render/list.json",
+		"/var/www/html/alifbe/index.html",
+		"/var/www/html/sm/index.html",
+		"/var/www/html/sm/style.css",
+		"/var/www/html/social media/index.html",
+		"/var/www/html/social media/index.js",
+		"/var/www/html/social media/style.css",
+		"/var/www/html/alifbe/style.css",
+		"/var/www/html/alifbe/script.js",
+		"/var/www/html/ilova/untitled.py",
+		"/var/www/html/ilova/main.py",
+		"/var/www/html/joranet/server/server.js",
+		"/var/www/html/joranet/server/package.json",
+		"/var/www/html/joranet/client/index.html",
+		"/var/www/html/joranet/client/assets/js/matrix.js",
+		"/var/www/html/joranet/client/assets/css/main.css",
+		"/var/www/html/ilova/pages.py",
+		"/var/www/html/ilova/config.py",
+		"/var/www/html/ilova/auth.py",
+		"/var/www/html/ilova/backend.py",
+		"/var/www/html/124maktab/db.txt",
+		"/var/www/html/mon/index.html",
+		"/var/www/html/birthday/index.html",
+		"/var/www/html/birthday/opt.js",
+		"/var/www/html/birthday/data.js",
+		"/var/www/html/birthday/script.js",
+		"/var/www/html/birthday/style.css",
+		"/home/jorabek/Desktop/myos/user/shell.c",
+		"/home/jorabek/Desktop/myos/kernel/proc/process.c",
+		"/home/jorabek/Desktop/myos/kernel/mm/memory.c",
+		"/home/jorabek/Desktop/myos/fs/simplefs.c",
+		"/home/jorabek/Desktop/myos/fs/simplefs.h",
+		"/home/jorabek/Desktop/myos/boot/stage2.asm",
+		"/home/jorabek/Desktop/myos/scripts/build.sh",
+		"/home/jorabek/Desktop/myos/kernel/drivers/keyboard.c",
+		"/home/jorabek/Desktop/myos/kernel/drivers/rtc.c",
+		"/home/jorabek/Desktop/myos/kernel/proc/scheduler.c",
+		"/home/jorabek/Desktop/myos/kernel/drivers/timer.c",
+		"/home/jorabek/Desktop/myos/kernel/arch/x86/isr.c",
+		"/home/jorabek/Desktop/myos/kernel/arch/x86/isr.asm",
+		"/home/jorabek/Desktop/myos/kernel/kernel.c",
+		"/home/jorabek/Desktop/myos/kernel/drivers/video.c",
+		"/opt/firefox/defaults/pref/channel-prefs.js",
+		"/home/jorabek/Desktop/myos/boot/stage1.asm",
+		"/home/jorabek/Desktop/myos/kernel/arch/x86/idt.c",
+		"/home/jorabek/Desktop/myos/scripts/run.sh",
+		"/home/jorabek/Desktop/myos/lib/stdint.h",
+		"/home/jorabek/Desktop/myos/lib/stdio.c",
+		"/home/jorabek/Desktop/myos/lib/string.c",
+		"/home/jorabek/Desktop/myos/user/echo.c"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 108.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "applyUI.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 209.0,
+		"last_filter": "prettier",
+		"selected_items":
+		[
+			[
+				"prettier",
+				"prettifyError"
+			],
+			[
+				"",
+				"!=="
+			]
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 263.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,15 @@
+{
+  "name":"JORA NET",
+  "navbar.home": "Bosh sahifa",
+  "navbar.messages": "Xabarlar",
+  "navbar.profile":"Profil",
+  "navbar.ai":"SI",
+  "navbar.apps":"Ilovalar",
+  "post_add":"Post Qo'shish",
+  "profile.settings":"Sozlamlar",
+  "settings.themes":"Mavzular",
+  "settings.language":"Til",
+  "settings.devices":"Qurilmalar",
+  "settings.info":"Ma'lumot",
+  "settings.storage":"Xotira"
+}

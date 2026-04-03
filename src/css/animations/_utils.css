@@ -1,0 +1,54 @@
+/* --- Animation Utility Classes --- */
+
+/* 1. Paydo bo'lish (Fade In) */
+.animate-fade-in {
+  animation: fadeIn var(--duration-normal) var(--ease-out) forwards;
+}
+
+/* 2. Bildirishnoma tushishi (Drop) */
+.animate-drop {
+  animation: dropNotif var(--duration-slow) var(--ease-glass) forwards;
+}
+
+/* 3. Yuklanish aylanasi (Spin) */
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* --- Interactive Hover Helpers --- */
+
+/* 4. Hoverda yuqoriga biroz ko'tarilish (Sizning card:active effektingiz uchun) */
+.hover-lift {
+  transition: var(--transition-smooth);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--hover-box-shadow);
+}
+
+.hover-lift:active {
+  transform: translateY(-1px) scale(var(--active-scale));
+}
+
+/* 5. Shaffoflik effekti (Hover) */
+.hover-opacity {
+  transition: var(--transition-fast);
+}
+
+.hover-opacity:hover {
+  opacity: var(--hover-opacity);
+}
+
+/* 6. Animatsiya kechikishi (Delays) 
+   Ro'yxat elementlari ketma-ket chiqishi uchun juda qo'l keladi.
+*/
+.delay-100 {
+  animation-delay: 100ms;
+}
+.delay-200 {
+  animation-delay: 200ms;
+}
+.delay-300 {
+  animation-delay: 300ms;
+}

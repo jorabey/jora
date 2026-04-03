@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>iOS Uslubidagi Header va Qidiruv</title>
+    <style>
+        /* CSS O'zgaruvchilar - Haqiqiy iOS ranglari va o'lchamlari */
+        :root {
+            --bg-color: #ffffff;
+            --header-bg: rgba(255, 255, 255, 0.75);
+            --header-border: rgba(60, 60, 67, 0.16);
+            --text-main: #000000;
+            --ios-blue: #007AFF;
+            --ios-blue-active: #0056b3;
+            --search-bg: rgba(118, 118, 128, 0.12);
+            --search-icon: rgba(60, 60, 67, 0.6);
+            --transition-bounce: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            --transition-smooth: all 0.3s ease;
+        }
+
+        /* Umumiy sozlamalar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            height: 200vh; /* Skroll qilib ko'rish uchun */
+            -webkit-font-smoothing: antialiased;
+            padding-top: 54px; /* Header balandligi */
+        }
+
+        /* * =========================================
+         * HEADER (Asosiy quti)
+         * ========================================= */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 54px;
+            background: var(--header-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 0.5px solid var(--header-border);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header-container {
+            width: 100%;
+            max-width: 1000px;
+            height: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+        }
+
+        /* SAHIFA NOMI (Sarlavha) */
+        .page-title {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 17px;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+            transition: var(--transition-bounce);
+            opacity: 1;
+            white-space: nowrap;
+        }
+
+        /* QIDIRUV TUGMASI (O'ngdagi lupa) */
+        .search-trigger {
+            margin-left: auto; /* O'ng burchakka surish */
+            background: transparent;
+            border: none;
+            color: var(--ios-blue);
+            padding: 8px 0 8px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-smooth);
+            z-index: 2;
+        }
+
+        .search-trigger:active {
+            opacity: 0.6;
+        }
+
+        /* * =========================================
+         * QIDIRUV OVERLAY (Qoplab oluvchi qism)
+         * ========================================= */
+        .search-overlay {
+            position: absolute;
+            top: 0;
+            left: 16px;
+            right: 16px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            pointer-events: none; /* Boshida bosilmaydi */
+            transition: var(--transition-bounce);
+            z-index: 3;
+        }
+
+        /* Qidiruv formasi qutisi */
+        .search-box {
+            flex-grow: 1;
+            height: 36px;
+            background: var(--search-bg);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            padding: 0 8px;
+            /* iOS kengayish animatsiyasi uchun boshlang'ich holat */
+            transform: scaleX(0.8);
+            transform-origin: right center;
+            opacity: 0;
+            transition: var(--transition-bounce);
+        }
+
+        .search-icon {
+            color: var(--search-icon);
+            flex-shrink: 0;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            padding: 0 6px;
+            color: var(--text-main);
+        }
+
+        .search-input::placeholder {
+            color: var(--search-icon);
+        }
+
+        /* Bekor qilish tugmasi */
+        .cancel-btn {
+            background: transparent;
+            border: none;
+            color: var(--ios-blue);
+            font-size: 17px;
+            cursor: pointer;
+            white-space: nowrap;
+            /* Yon tomondan kirib kelish animatsiyasi uchun */
+            transform: translateX(20px);
+            opacity: 0;
+            transition: var(--transition-bounce);
+        }
+
+        .cancel-btn:active {
+            color: var(--ios-blue-active);
+        }
+
+        /* Tozalash (X) tugmasi */
+        .clear-btn {
+            background: var(--search-icon);
+            color: white;
+            border: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            pointer-events: none;
+            transition: var(--transition-smooth);
+        }
+
+        .clear-btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* * =========================================
+         * AKTIV HOLAT (Qidiruv ochilganda)
+         * ========================================= */
+        .header.search-active .page-title {
+            opacity: 0;
+            transform: translate(-50%, -10px) scale(0.95); /* Yuqoriga qarab xira tortib ketadi */
+        }
+
+        .header.search-active .search-trigger {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .header.search-active .search-overlay {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .header.search-active .search-box {
+            transform: scaleX(1);
+            opacity: 1;
+        }
+
+        .header.search-active .cancel-btn {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        /* * =========================================
+         * DEMO KONTENT (O'chirish mumkin)
+         * ========================================= */
+        .content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 16px;
+        }
+
+        .card {
+            background: #f2f2f7;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        h2 { font-size: 22px; margin-bottom: 8px; font-weight: 600; letter-spacing: -0.5px; }
+        p { color: rgba(60, 60, 67, 0.8); line-height: 1.5; }
+
+    </style>
+</head>
+<body>
+
+    <!-- iOS Uslubidagi Header -->
+    <header class="header" id="mainHeader">
+        <div class="header-container">
+            
+            <!-- Sarlavha (Sahifa nomi) -->
+            <h1 class="page-title">Asosiy sahifa</h1>
+
+            <!-- Qidiruvni ochish tugmasi -->
+            <button class="search-trigger" id="openSearchBtn" aria-label="Qidiruvni ochish">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+
+            <!-- Qidiruv qoplamasi (Overlay) -->
+            <div class="search-overlay">
+                <div class="search-box">
+                    <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                    
+                    <input type="text" class="search-input" id="searchInput" placeholder="Qidirish" autocomplete="off" spellcheck="false">
+                    
+                    <button class="clear-btn" id="clearBtn" aria-label="Tozalash">
+                        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
+                </div>
+                <button class="cancel-btn" id="cancelSearchBtn">Bekor qilish</button>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- Demo Sahifa mazmuni -->
+    <main class="content">
+        <div class="card">
+            <h2>Haqiqiy iOS hissi</h2>
+            <p>Yuqoridagi lupani bosing. Header qanday qilib oyna kabi qidiruv maydoniga aylanishiga e'tibor bering. Barcha tranzaksiyalar juda silliq (Apple'ning spring animatsiyasiga o'xshatilgan).</p>
+        </div>
+        <div class="card">
+            <h2>Minimalizm</h2>
+            <p>Faqat sizga kerakli narsalar: sahifa nomi va bitta qidiruv ikonasi. Ortig'i yo'q. Qidiruv faollashganda esa faqat qidiruv oynasi qoladi.</p>
+        </div>
+        <div class="card">
+            <h2>Xavfsiz va Moslashuvchan</h2>
+            <p>Skriptda xatoliklar yo'q. Elementlarga faqat kod bilan murojaat qilingan. Telefon va kompyuterlarda bir xilda mukammal ishlaydi.</p>
+        </div>
+    </main>
+
+    <script>
+        // ==========================================
+        // JAVASCRIPT: iOS Qidiruv animatsiyasi mantiqlari
+        // ==========================================
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('mainHeader');
+            const openBtn = document.getElementById('openSearchBtn');
+            const cancelBtn = document.getElementById('cancelSearchBtn');
+            const searchInput = document.getElementById('searchInput');
+            const clearBtn = document.getElementById('clearBtn');
+
+            // Qidiruvni OCHISH
+            const openSearch = () => {
+                header.classList.add('search-active');
+                
+                // Animatsiya tugagandan so'ng klaviatura chiqishi uchun qisqa kutish (ayniqsa mobil uchun)
+                setTimeout(() => {
+                    searchInput.focus();
+                }, 300);
+            };
+
+            // Qidiruvni YOPISH
+            const closeSearch = () => {
+                header.classList.remove('search-active');
+                searchInput.value = ''; // Matnni tozalash
+                searchInput.blur();     // Fokusni olib tashlash (klaviaturani yopish)
+                toggleClearButton();    // X tugmasini yashirish
+            };
+
+            // Matn kiritilganda "X" (tozalash) tugmasini ko'rsatish/yashirish
+            const toggleClearButton = () => {
+                if (searchInput.value.length > 0) {
+                    clearBtn.classList.add('visible');
+                } else {
+                    clearBtn.classList.remove('visible');
+                }
+            };
+
+            // Matnni tozalash tugmasi bosilganda
+            const clearSearch = () => {
+                searchInput.value = '';
+                toggleClearButton();
+                searchInput.focus(); // Tozalagandan keyin yana yozishga tayyor turish
+            };
+
+            // Hodisalarni ulash (Event Listeners)
+            openBtn.addEventListener('click', openSearch);
+            cancelBtn.addEventListener('click', closeSearch);
+            searchInput.addEventListener('input', toggleClearButton);
+            clearBtn.addEventListener('click', clearSearch);
+
+            // Escape tugmasi orqali tez yopish (Kompyuterlar uchun qulaylik)
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && header.classList.contains('search-active')) {
+                    closeSearch();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

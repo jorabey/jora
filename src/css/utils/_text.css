@@ -1,0 +1,92 @@
+/* --- Typography Utility Classes --- */
+
+/* 1. Shrift o'lchamlari (Root dagi o'zgaruvchilar asosida) */
+.text-xs {
+  font-size: var(--text-xs) !important;
+}
+.text-sm {
+  font-size: var(--text-sm) !important;
+}
+.text-base {
+  font-size: var(--text-base) !important;
+}
+.text-lg {
+  font-size: var(--text-lg) !important;
+}
+.text-xl {
+  font-size: var(--text-xl) !important;
+}
+.text-2xl {
+  font-size: var(--text-2xl) !important;
+}
+.text-3xl {
+  font-size: var(--text-3xl) !important;
+}
+
+/* 2. Shrift qalinligi (Weight) */
+.font-light {
+  font-weight: var(--font-light) !important;
+}
+.font-normal {
+  font-weight: var(--font-normal) !important;
+}
+.font-medium {
+  font-weight: var(--font-medium) !important;
+}
+.font-bold {
+  font-weight: var(--font-bold) !important;
+}
+
+/* 3. Matn tekislash (Alignment) */
+.text-left {
+  text-align: left !important;
+}
+.text-center {
+  text-align: center !important;
+}
+.text-right {
+  text-align: right !important;
+}
+.text-justify {
+  text-align: justify !important;
+}
+
+/* 4. Matn ranglari (Semantic Colors) */
+.text-primary {
+  color: var(--primary-color) !important;
+}
+.text-secondary {
+  color: var(--secondary-color) !important;
+}
+.text-white {
+  color: var(--white) !important;
+}
+.text-error {
+  color: var(--error) !important;
+}
+.text-success {
+  color: var(--success) !important;
+}
+.text-blue {
+  color: var(--blue-500) !important;
+}
+
+/* 5. Matn transformatsiyasi */
+.uppercase {
+  text-transform: uppercase !important;
+}
+.lowercase {
+  text-transform: lowercase !important;
+}
+.capitalize {
+  text-transform: capitalize !important;
+}
+
+/* 6. Matnni qisqartirish (Truncate) 
+   Agar matn juda uzun bo'lsa, "..." qo'shib qo'yadi 
+*/
+.truncate {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}

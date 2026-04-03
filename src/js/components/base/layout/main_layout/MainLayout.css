@@ -1,0 +1,30 @@
+/* =============== MAIN LAYOUT ========== */
+.conatiner {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: var(--space-4);
+  padding: var(--space-5);
+}
+
+.container::selection {
+  background-color: var(--gray-10);
+  color: var(--blue-10);
+}
+
+.header{
+	position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 54px;
+            background: var(--header-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 0.5px solid var(--header-border);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+}

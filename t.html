@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Futuristic iOS Header</title>
+    <style>
+        /* CSS O'zgaruvchilar - Rasmingizdagi issiq ranglarga moslashtirilgan */
+        :root {
+            /* Rasmdagi fonga mos issiq sarg'ish/krem rang */
+            --bg-color: #fdf5ea; 
+            /* Header qutisi rangi (bir oz to'qroq krem) */
+            --header-surface: #f3e9d9;
+            /* Header ramkasi (juda mayin) */
+            --header-border: rgba(0, 0, 0, 0.06);
+            /* Matn ranglari */
+            --text-main: #1c1c1e;
+            --text-muted: #8e8e93;
+            /* Aktiv ranglar (Tugmalar uchun) */
+            --accent-color: #000000;
+            
+            /* Animatsiyalar (Apple Spring effekti) */
+            --spring: all 0.5s cubic-bezier(0.32, 0.72, 0, 1);
+            --smooth: all 0.3s ease;
+        }
+
+        /* Umumiy sozlamalar (Reset) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* iOS va zamonaviy qurilmalar uchun toza shrift */
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'SF Pro Display', Roboto, sans-serif;
+            -webkit-tap-highlight-color: transparent; /* Mobil bosishdagi ko'k fonni yo'qotish */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 200vh; /* Skroll uchun */
+            padding: 16px; /* Butun sahifaga chetidan joy tashlash */
+        }
+
+        /* * =========================================
+         * FLOATING HEADER (Havoda suzib turuvchi quti)
+         * ========================================= */
+        .floating-header {
+            position: fixed;
+            top: 16px;
+            left: 16px;
+            right: 16px;
+            max-width: 800px; /* Kattaroq ekranlarda o'rtada turishi uchun */
+            margin: 0 auto; /* Markazga tushirish */
+            height: 60px;
+            
+            /* Glassmorphism va silliq fon */
+            background: rgba(243, 233, 217, 0.85);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            
+            border: 1.5px solid var(--header-border);
+            border-radius: 20px; /* Xuddi sizning rasmingizdagidek yumaloq burchaklar */
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.03); /* Mayin soya */
+            
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* Ichidagi elementlar toshib ketmasligi uchun */
+            transition: var(--spring);
+            z-index: 100;
+        }
+
+        /* ASOSIY KONTENT (Sarlavha va Lupa) */
+        .header-content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            transition: var(--spring);
+        }
+
+        /* Sahifa nomi */
+        .page-title {
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: -0.4px;
+            color: var(--text-main);
+        }
+
+        /* Lupa tugmasi */
+        .search-trigger {
+            background: transparent;
+            border: none;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--smooth);
+            margin-right: -10px; /* O'ng burchakka yaqinlashtirish */
+        }
+
+        .search-trigger:active {
+            background: rgba(0, 0, 0, 0.05);
+            transform: scale(0.9);
+        }
+
+        /* * =========================================
+         * QIDIRUV FORMASI (Bosilganda chiqadigan qism)
+         * ========================================= */
+        .search-form {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            gap: 12px;
+            
+            /* Boshlang'ich holati (Yashiringan) */
+            opacity: 0;
+            pointer-events: none;
+            transform: translateX(20px); /* O'ngdan kirib keladi */
+            transition: var(--spring);
+        }
+
+        /* Qidiruv Input qutisi */
+        .input-wrapper {
+            flex-grow: 1;
+            height: 40px;
+            background: rgba(0, 0, 0, 0.06);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+        }
+
+        .input-icon {
+            color: var(--text-muted);
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+
+        .search-input {
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: 17px;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .search-input::placeholder {
+            color: var(--text-muted);
+            font-weight: 400;
+        }
+
+        /* Tozalash tugmasi (X) */
+        .clear-btn {
+            background: rgba(0, 0, 0, 0.2);
+            color: #fff;
+            border: none;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0; /* Boshida ko'rinmaydi */
+            pointer-events: none;
+            transition: var(--smooth);
+        }
+
+        .clear-btn.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Bekor qilish tugmasi */
+        .cancel-btn {
+            background: transparent;
+            border: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--accent-color);
+            cursor: pointer;
+            white-space: nowrap;
+        }
+
+        /* * =========================================
+         * AKTIV HOLAT (Qidiruv ochiq bo'lganda)
+         * ========================================= */
+        .floating-header.search-active .header-content {
+            opacity: 0;
+            transform: scale(0.95); /* Matn orqaga uzoqlashib yo'qoladi */
+            pointer-events: none;
+        }
+
+        .floating-header.search-active .search-form {
+            opacity: 1;
+            transform: translateX(0); /* Joyiga keladi */
+            pointer-events: auto;
+        }
+
+        /* Qo'shimcha demo matnlar (Ixtiyoriy) */
+        .demo-content {
+            margin-top: 100px;
+            padding: 20px;
+            background: rgba(243, 233, 217, 0.5);
+            border-radius: 24px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Havoda suzib turuvchi Header (Floating Pill) -->
+    <header class="floating-header" id="headerPill">
+        
+        <!-- 1-Holat: Sarlavha va Qidiruv tugmasi -->
+        <div class="header-content" id="headerContent">
+            <h1 class="page-title">Profile</h1>
+            <button class="search-trigger" id="openSearchBtn" aria-label="Qidirish">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+
+        <!-- 2-Holat: Qidiruv ochiq bo'lganda -->
+        <div class="search-form" id="searchForm">
+            <div class="input-wrapper">
+                <svg class="input-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                
+                <input type="text" id="searchInput" class="search-input" placeholder="Qidirish..." autocomplete="off">
+                
+                <button class="clear-btn" id="clearBtn" aria-label="Tozalash">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <button class="cancel-btn" id="cancelSearchBtn">Bekor qilish</button>
+        </div>
+
+    </header>
+
+    <script>
+        // JS: Animatsiya va Mantiq
+        document.addEventListener('DOMContentLoaded', () => {
+            const header = document.getElementById('headerPill');
+            const openBtn = document.getElementById('openSearchBtn');
+            const cancelBtn = document.getElementById('cancelSearchBtn');
+            const searchInput = document.getElementById('searchInput');
+            const clearBtn = document.getElementById('clearBtn');
+
+            // Qidiruvni ochish funksiyasi
+            const openSearch = () => {
+                header.classList.add('search-active');
+                // Animatsiya silliq tugagach, inputga fokus beramiz (telefonlarda klaviatura chiqadi)
+                setTimeout(() => {
+                    searchInput.focus();
+                }, 300);
+            };
+
+            // Qidiruvni yopish funksiyasi
+            const closeSearch = () => {
+                header.classList.remove('search-active');
+                searchInput.value = ''; // Yopilganda matnni tozalaymiz
+                searchInput.blur();     // Klaviaturani yopamiz
+                toggleClearButton();    // "X" ikonkasini yashiramiz
+            };
+
+            // Yozilayotganda "X" (tozalash) tugmasini nazorat qilish
+            const toggleClearButton = () => {
+                if (searchInput.value.length > 0) {
+                    clearBtn.classList.add('visible');
+                } else {
+                    clearBtn.classList.remove('visible');
+                }
+            };
+
+            // Matnni bir marta bosish orqali tozalash
+            const clearSearch = () => {
+                searchInput.value = '';
+                toggleClearButton();
+                searchInput.focus(); // Tozalagach yana yozishga tayyor qilish
+            };
+
+            // Event Listener'larni ulash
+            openBtn.addEventListener('click', openSearch);
+            cancelBtn.addEventListener('click', closeSearch);
+            searchInput.addEventListener('input', toggleClearButton);
+            clearBtn.addEventListener('click', clearSearch);
+        });
+    </script>
+</body>
+</html>

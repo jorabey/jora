@@ -1,0 +1,57 @@
+/* ================ NOTIFICATION HOST ============ */
+.container {
+  width: 100%;
+}
+
+.notif {
+  position: fixed;
+  top: 50px;
+  left: 40%;
+  transform: translateX(-50%);
+  color: var(--notif-text-color);
+  padding: 12px 20px;
+  border-radius: var(--notif-border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 300px;
+  z-index: 1000;
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.info {
+  color: var(--color-info);
+}
+
+/* ================= RESPONSIVE =========== */
+@media (max-width: 732px) {
+  .notif {
+    left: 25%;
+  }
+}
+
+@media (max-width: 475px) {
+  .notif {
+    left: 10%;
+  }
+}
+
+@media (max-width: 373px) {
+  .notif {
+    left: 10%;
+  }
+}
+
+@media (max-height: 330px) {
+  .notif {
+    left: 5%;
+  }
+}
